@@ -1,0 +1,29 @@
+﻿@model M10.Models.User
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="col-12">
+    <div class="input-group col-12">
+        <div class="col-12">
+            <h4>Sign in</h4>
+        </div>
+        <form method="post" action="login">
+            <div class="text-dark">
+                <div class="form-group row col-12">
+                    <label for="login">Login</label>
+                    <input asp-for="Login" validation="User." name="login" class="form-control" type="text">
+                    <span asp-validation-for="Login" class="text-danger"></span>
+                </div>
+                <div class="form-group row col-12">
+                    <label for="password">Password</label>
+                    <input asp-for="Password" name="password" class="form-control" type="text">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="col-6">
+                    <input type="submit" value="Submit" name="Edit" class="btn btn-primary form-control" />
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

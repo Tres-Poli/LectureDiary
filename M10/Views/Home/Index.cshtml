@@ -1,0 +1,18 @@
+﻿@model M10.Models.LectureScheduleViewModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<h1 class="text-center">Lecture schedule</h1>
+<div class="col-12 border p-3 mt-3">
+    <form method="post">
+        <div class="border">
+            @for(int i = 0; i < Model.Lectures.Count(); ++i)
+            {
+            <div class="list-group-item">
+                <a href="" >@(i + 1) - @Model.Lectures.ElementAt(i).Name</a>
+            </div>
+            }
+        </div>
+    </form>
+</div>

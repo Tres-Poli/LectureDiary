@@ -1,0 +1,34 @@
+﻿@model M10.Models.LecturerProfileViewModel
+@{
+    ViewData["Title"] = "LecturerProfile";
+}
+
+<h1>Hello, Mr. Lecturer</h1>
+
+<br />
+<div class="col-12">
+    <table class="table table-striped border">
+        <tr class="table-secondary">
+            <th>Student name</th>
+            @foreach (var lec in Model.Lectures)
+            {
+                <th>
+                    @lec
+                </th>
+            }
+        </tr>
+        @foreach (var node in Model.AllStudentScores)
+        {
+        <tr>
+            <td>@node.Key</td>
+            @foreach (var score in node.Value)
+            {
+                <td>
+                    @score
+                </td>
+            }
+        </tr>
+        }
+
+    </table>
+</div>
